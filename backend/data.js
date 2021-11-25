@@ -18,7 +18,6 @@ const data = {
     ],
     products:[
         {
-            _id:'1',
             name:'kebab',
             image:'/images/p1.jpg',
             price:15,
@@ -30,7 +29,6 @@ const data = {
 
         },
         {
-            _id:'2',
             name:'salad',
             image:'/images/p2.jpg',
             price:15,
@@ -42,7 +40,6 @@ const data = {
 
         },
         {
-            _id:'3',
             name:'chicken',
             image:'/images/p3.jpg',
             price:15,
@@ -54,7 +51,6 @@ const data = {
 
         },
         {
-            _id:'4',
             name:'pizza',
             image:'/images/p4.jpg',
             price:15,
@@ -66,9 +62,10 @@ const data = {
 
         },
         {
-            _id:'5',
             name:'puncakes',
             image:'/images/p5.jpg',
+            countInStock:13,
+
             price:14,
             type: 'puncakes',
             rating:3,
@@ -77,7 +74,6 @@ const data = {
 
         },
         {
-            _id:'6',
             name:'fries',
             image:'/images/p6.jpg',
             price:15,
