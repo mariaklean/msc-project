@@ -1,6 +1,21 @@
 /*simple data fro practise*/
-
+import bcrypt from 'bcryptjs';
 const data = {
+
+    users:[
+        {
+            name:'maria',
+            email:'makleanthous@hotmail.com',
+            password: bcrypt.hashSync('1234',8),
+            isAdmin:true,
+        },
+        {
+            name:'Elena',
+            email:'ele@hotmail.com',
+            password: bcrypt.hashSync('1234',8),
+            isAdmin:false,
+        },
+    ],
     products:[
         {
             _id:'1',
