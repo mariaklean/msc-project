@@ -1,12 +1,20 @@
 import express from 'express';
 import mongoose  from 'mongoose';
+import data from './data.js';
 import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
+
+
+//resolve the undedifies email on postman
+app.use(express.json());
+app.use(express.urlencoded({extend:true}));
+
 mongoose.connect(process.env.MONGODB_URL ||  'mongodb://localhost/project2021');
-
-
 
 
 app.use("/api/users", userRouter);
