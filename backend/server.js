@@ -21,6 +21,8 @@ app.use("/api/users", userRouter);
 app.use('/api/products',productRouter);
 app.use('/api/orders', orderRouter);
 
+app.use(express.static(path.join(__dirname, '/thefrontend/build')));
+app.get('*', (req,res)=> res.sendFile(path.join(__dirname, 'thefrontend/build/index.html')));
 app.get('/', (req, res) => {
   res.send('Server is ready');
 });
