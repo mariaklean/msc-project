@@ -31,7 +31,6 @@ app.use((err,req,res,next)=>{
   res.status(500).send({message:err.message})
 });
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Serve at http://localhost:${port}`);
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
